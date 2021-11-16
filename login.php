@@ -21,8 +21,9 @@
 </head>
 
 <body>
+    <div class="page-wrapper">
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/header.php" ?>
 
         <!-- Main content - start -->
         <main class="page-content container">
@@ -88,7 +89,7 @@
                             <div class="actions-toolbar">
                                 <div class="secondary">
                                     <button type="submit" class="btn-primary">
-                                        <a href="">
+                                        <a href="create-account.php">
                                             <span>Create an Account</span>
                                         </a>
                                     </button>
@@ -101,7 +102,7 @@
         </main>
         <!-- Main content - end -->
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/footer.php" ?>
 
     </div>
 

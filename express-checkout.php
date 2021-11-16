@@ -22,10 +22,10 @@
 <body>
     <div class="page-wrapper">
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/header.php" ?>
 
         <!-- Main content - start -->
-        <main class="page-main bg-white mg-bot-60">
+        <main class="page-main page-content bg-white mg-bot-60">
             <div class="grid wide page-express-checkout">
                 <div class="page-title-wrapper">
                     <h1 class="page-title">
@@ -35,16 +35,15 @@
                 <div class="row container">
                     <!-- Sign in -->
                     <div class="authentication-wrapper">
-                        <div class="action-auth-toggle-toggle">
+                        <div class="action-auth-toggle-toggle dropdown-btn">
                             <button class="action-auth-btn">
                                 <span>Sign In</span>
                             </button>
                         </div>
-                        <!-- Remove class 'hidden' to display -->
-                        <div class="authentication-form-wrapper hidden">
-                            <div class="authentication-form__heading">
+                        <div class="authentication-form-wrapper dropdown-content">
+                            <div class="authentication-form__heading close-btn">
                                 <span>Sign In</span>
-                                <button class="close-btn">
+                                <button class="">
                                     <i class="ti-close"></i>
                                 </button>
                             </div>
@@ -325,7 +324,6 @@
                                     <div class="title">
                                         <span>3</span>
                                         <span> Items In Cart</span>
-                                        <i class="ti-angle-up"></i>
                                     </div>
 
                                     <ul class="items-in-cart__list">
@@ -495,7 +493,7 @@
         </main>
         <!-- Main content - end -->
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/footer.php" ?>
 
     </div>
 

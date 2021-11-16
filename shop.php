@@ -22,7 +22,7 @@
 <body>
     <div class="page-wrapper">
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/header.php" ?>
 
         <!-- Main content - start -->
         <main class="page-shop">
@@ -41,7 +41,7 @@
                 <div class="main-content">
                     <div class="row">
                         <div class="not-pc">
-                            <i class="fas fa-filter filter-icon"></i>
+                            <!-- <i class="fas fa-filter filter-icon"></i> -->
                         </div>
                         <!-- Sidebar -->
                         <div class="col l-3 m-0 c-0 sidebar">
@@ -121,10 +121,10 @@
                             <!-- Filter -->
                             <div class="toolbar toolbar-products">
                                 <div class="modes">
-                                    <strong class="modes-mode active">
+                                    <a href="#col-4" class="modes-mode layout-mode active">
                                         <i class="fas fa-th"></i>
-                                    </strong>
-                                    <a href=""class="modes-mode mode-list">
+                                    </a>
+                                    <a href="#col-1"class="modes-mode mode-list layout-mode">
                                         <i class="fas fa-th-large"></i>
                                     </a>
                                 </div>
@@ -149,7 +149,7 @@
                             </div>
                             
                             <!-- 4 col -->
-                            <div class="product-grid ">
+                            <div id="col-4" class="product-grid active">
                                 <div class="grid">
                                     <ul class="row product-list">
                                         <li class="col l-3 m-4 c-6 product-wrapper">
@@ -517,8 +517,7 @@
                             </div>
 
                             <!-- 1 col -->
-                            <!-- Remove class 'hidden' to display -->
-                            <div class="product-grid full-row hidden">
+                            <div id="col-1" class="product-grid full-row">
                                 <div class="grid">
                                     <ul class="row product-list">
                                         <li class="col l-12 m-12 c-12 product-wrapper item-horizontal">
@@ -1149,8 +1148,7 @@
         </main>
         <!-- Main content - end -->
 
-        <!-- --------------------------------------- -->
-
+        <?php include "./blocks/footer.php" ?>
 
     </div>
 

@@ -22,7 +22,7 @@
 <body>
     <div class="page-wrapper">
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/header.php" ?>
 
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
@@ -207,22 +207,30 @@
                     <div class="product-info-detail__tab-wrapper">
                         <div class="tab-heading">
                             <div class="tabs-item-wrapper">
-                                <a  class="tab-item active ">
-                                    <span>Details</span>
-                                </a>
-                                <a  class="tab-item">
-                                    <span>More Infomation</span>
-                                </a>
-                                <a class="tab-item">
-                                    <span>Reviews</span>
-                                    <span class="counter">3</span>
-                                </a>
+                                <ul class="tabs-nav">
+                                    <li class="tab--active">
+                                        <a href="#details"class="tab-item">
+                                            <span>Details</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#moreinfo" class="tab-item">
+                                            <span>More Infomation</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#reviews" class="tab-item">
+                                            <span>Reviews</span>
+                                            <span class="counter">3</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         
                         <div class="tab-content">
                             <!-- Detail -->
-                            <div class="tab-pane ">
+                            <div id="details" class="tab-pane active">
                                 <div class="product-detail-description">
                                     <p>The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. 
                                         Designed specifically for the creative professional, this display provides more space 
@@ -260,8 +268,7 @@
                             </div>
 
                             <!-- More infomation -->
-                            <!-- Remove class 'hidden' to display -->
-                            <div class="tab-pane hidden">
+                            <div id="moreinfo" class="tab-pane ">
                                 <div class="product-detail-more-info">
                                     <table>
                                         <tbody>
@@ -279,8 +286,7 @@
                             </div>
 
                             <!-- Reviews -->
-                            <!-- Remove class 'hidden' to display -->
-                            <div class="tab-pane hidden">
+                            <div id="reviews" class="tab-pane ">
                                 <div class="block product-detail-review ">
                                     <div class="block-title">
                                         <span>Customer Reviews</span>
@@ -693,7 +699,7 @@
                                 <div class="onsale">
                                     <span>-20%</span>
                                 </div>
-                                <a href="" class="product-name">Lorem ipsum dolor/a>
+                                <a href="" class="product-name">Lorem ipsum dolor</a>
                                 <div class="product-price">
                                     <div class="price-final">$388.66</div>
                                     <div class="price-old">$569.99</div>
@@ -707,7 +713,7 @@
         </main>
         <!-- Main content - end -->
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/footer.php" ?>
 
 
     </div>

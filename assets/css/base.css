@@ -20,15 +20,22 @@ ul, ol {
     list-style: none;
 }
 
-li {}
 
 a {
     text-decoration: none;
     outline: none;
 }
 
+.mt-2 {
+    margin-top: 2rem;
+}
+
 h5, h4, h3, h2, h1, p{
     margin: 0;
+}
+
+.d-block {
+    display: block;
 }
 
 .size-18 {
@@ -77,6 +84,10 @@ h5, h4, h3, h2, h1, p{
 }
 
 .not-pc {
+    display: none !important;
+}
+
+.just-mobile {
     display: none !important;
 }
 
@@ -146,6 +157,11 @@ h5, h4, h3, h2, h1, p{
     transition: all 0.4s ease-in-out;
 }
 
+.dropdown-content {
+    display: none;
+    z-index: 3;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -153,6 +169,26 @@ h5, h4, h3, h2, h1, p{
     bottom: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    animation: fadeIn linear 0.3s;
+    z-index: 3;
+}
+
+.overlay {
+    display:none;
+}
+
+.overlay.visible,
+.bgOverlay {
+    display: block;
+}
+
+.bgOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: none;
     animation: fadeIn linear 0.3s;
     z-index: 2;
@@ -169,6 +205,11 @@ h5, h4, h3, h2, h1, p{
 
 .product-grid {
     margin: 36px 0;
+    display: none;
+}
+
+.product-grid.active {
+    display: block;
 }
 
 .product-price {
@@ -364,7 +405,7 @@ h5, h4, h3, h2, h1, p{
     margin-bottom:12px;
 }
 
-.tab-ui--active .cat-name::after{
+.tab--active .hot-cat-name::after{
     background-color: var(--primary-color);
 }
 
@@ -617,7 +658,19 @@ h5, h4, h3, h2, h1, p{
     height: 0;
 }
 
-.tab--active {
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab--active .cat-name{
+    color: var(--primary-color) !important;
+}
+
+.tab--active a span{
     color: var(--primary-color) !important;
 }
 
@@ -627,10 +680,21 @@ h5, h4, h3, h2, h1, p{
 }
 
 .tab-item {
-    padding: 0 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tab-link {
+    display: block;
+    height: 100%;
+}
+
+.tab-link span {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 15px;
 }
 
 .tab-link:hover .cat-name{
@@ -729,7 +793,7 @@ h5, h4, h3, h2, h1, p{
     min-width: 180px;
     border: 1px solid #e6e6e6;
     box-shadow: none;
-    margin: 4px 0;
+    /* margin: 4px 0; */
     top: 100%;
     opacity: 0;
     visibility: hidden;
@@ -1146,6 +1210,22 @@ input[type="radio"]{
     font-size: 1.4rem;
     color: #888;
 }
+
+/* Fading animation */
+.fade {
+    -webkit-animation: fade 1.5s;
+    animation: fade 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 
 

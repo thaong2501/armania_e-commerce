@@ -22,10 +22,10 @@
 <body>
     <div class="page-wrapper">
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/header.php" ?>
 
         <!-- Main content - start -->
-        <main class="page-main bg-white mg-bot-60">
+        <main class="page-main page-content bg-white mg-bot-60">
             <div class="grid wide page-cart-checkout">
                 <div class="page-title-wrapper">
                     <h1 class="page-title">
@@ -208,14 +208,14 @@
                         </div>
 
                         <div class="block-shipping">
-                            <div class="block-title">
+                            <div class="block-title panel-heading">
                                 <span>Estimate Shipping and Tax</span>
-                                <i class="ti-angle-up"></i>
+                                <i class="ti-angle-down"></i>
                             </div>
-                            <div class="block-shipping-summary">
+                            <div class="block-shipping-summary panel-collapse">
                                 <form action="" class="shipping-zip-form">
                                     <div class="fieldset estimate">
-                                        <div class="field note">
+                                        <div class="field note mt-2">
                                             Enter your destination to get a shipping estimate.
                                         </div>
                                         <div class="field country-select">
@@ -309,14 +309,14 @@
                         </div>
 
                         <div class="block-discount">
-                            <div class="block-title">
+                            <div class="block-title panel-heading">
                                 <span>Apply Discount Code</span>
-                                <i class="ti-angle-up"></i>
+                                <i class="ti-angle-down"></i>
                             </div>
-                            <div class="block-content">
+                            <div class="block-content panel-collapse">
                                 <form action="" class="discount-coupon-form">
                                     <div class="fieldset coupon">
-                                        <div class="field discount-code">
+                                        <div class="field discount-code mt-2">
                                             <label class="label">Enter discount code</label>
                                             <div class="control">
                                                 <input type="text" name="" id="">
@@ -332,7 +332,7 @@
 
                         <div class="cart-checkout">
                             <div class="action">
-                                <button class="btn-primary">Proceed to Checkout</button>
+                                <a href="express-checkout.php"class="btn-primary d-block">Proceed to Checkout</a>
                                 <a href="" class="action-multicheckout">Check Out with Multiple Addresses</a>
                             </div>
                         </div>
@@ -342,7 +342,7 @@
         </main>
         <!-- Main content - end -->
 
-        <!-- --------------------------------------- -->
+        <?php include "./blocks/footer.php" ?>
 
     </div>
 
